@@ -1,4 +1,5 @@
-import Chart from 'chart.js/auto'
+//import Chart from 'chart.js/auto'//This doesnt work when building app 
+import Chart from '../../../node_modules/chart.js/auto/auto'
 
 export const chartRender = (node, options) => {
     // console.log('Action')
