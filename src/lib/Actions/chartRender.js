@@ -1,5 +1,6 @@
 //import Chart from 'chart.js/auto'//This doesnt work when building app 
 import Chart from '../../../node_modules/chart.js/auto/auto'
+import pattern from 'patternomaly'
 
 export const chartRender = (node, options) => {
     // console.log('Action')
@@ -7,7 +8,7 @@ export const chartRender = (node, options) => {
     // console.log("This is options: ")
     // console.log(options)
 
-     console.log("Chart Render is called: ")
+    console.log("Chart Render is called: ")
     const _chart = new Chart (node, options)
 
     return {
