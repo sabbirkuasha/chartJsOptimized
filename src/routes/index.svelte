@@ -1,6 +1,7 @@
 <script>
     import {chartRender} from '$lib/Actions/chartRender'
     import {BarData, DoughnutData} from '$lib/data/chartData'
+    import { onMount } from 'svelte' 
     import pattern from 'patternomaly'
     
     let myInterval
@@ -13,7 +14,17 @@
     const toggleBarChart = ()=>{
         showBarChart = !showBarChart
         clearInterval(myInterval)
+    }
 
+    let showBarOverlay = false
+    const barOverlayImage = () =>{
+        if(showBarOverlay){
+            BarData.data.datasets[0].backgroundColor = pattern.draw('dot-dash','rgb(255, 99, 132, 1)')
+        }else{
+            BarData.data.datasets[0].backgroundColor = ['rgba(245, 40, 145, 0.8)']
+        }
+        showBarOverlay = !showBarOverlay
+        chartRender()
     }
 </script>
 
@@ -25,6 +36,10 @@
     <button class="btn btn-primary"
             on:click={()=>{toggleBarChart()}}>
         Show/ Hide Bar Chart
+    </button>
+    <button class="btn btn-primary"
+            on:click={()=>{barOverlayImage()}}>
+        Bar Overlay Image?
     </button>
 {#if showBarChart}
     <div class="w-3/5 h-96 mt-10 border m-auto rounded-3xl bg-cyan-900">
