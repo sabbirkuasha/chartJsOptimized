@@ -16,7 +16,7 @@
         clearInterval(myInterval)
     }
 
-    let showBarOverlay = false
+    let showBarOverlay = true
     const barOverlayImage = () =>{
         if(showBarOverlay){
             BarData.data.datasets[0].backgroundColor = pattern.draw('dot-dash','rgb(255, 99, 132, 1)')
@@ -24,7 +24,6 @@
             BarData.data.datasets[0].backgroundColor = ['rgba(245, 40, 145, 0.8)']
         }
         showBarOverlay = !showBarOverlay
-        chartRender()
     }
 </script>
 
