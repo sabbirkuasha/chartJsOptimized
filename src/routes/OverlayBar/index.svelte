@@ -4,14 +4,11 @@
     import { onMount } from 'svelte'
     import pattern from 'patternomaly'
 
-
-
     onMount(()=>{
         // console.log("on mount called")
         // console.log(BarData2.data.datasets[0].backgroundColor)
         BarData2.data.datasets[0].backgroundColor = pattern.draw('dot-dash','rgb(255, 99, 132, 0.5)')
     })
-
 
 </script>
 

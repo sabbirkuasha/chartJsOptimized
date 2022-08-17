@@ -6,8 +6,10 @@
 
 
 <NavBar appName="ChartJs Overlay & floating bar"
-		export let btnMenu = "Who am I"
+		btnMenu = "Who am I"
 		menu1="Overlay Bar"
 		menu1URL="/OverlayBar"
+		menu3 = "Half Doughnut"
+		menu3URL="/Doughnut/half"
 />
 <slot />

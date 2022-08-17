@@ -89,19 +89,17 @@ export const BarData = {
 export const DoughnutData ={
     type: 'doughnut',
     data: {
-        labels:['Green', 'Blue', 'Gray', 'Purple', 'Yellow', 'Red', 'Black'],
+        
+        labels:['Yellow', 'Orange', 'Red',],
         datasets: [{
-            data: [14,56,34,45,85,64,64],
-            backgroundColor: [
-                "green",
-                "blue",
-                "gray",
-                "Purple",
-                "yellow",
-                "red",
-                "black"
-            ],
-        }],
+            data: [14,56,34],
+            backgroundColor: ["rgba(237, 210, 0, 0.8)","rgba(237, 111, 0, 0.8)","rgba(255, 0, 0, 0.8)"],
+            borderWidth: 4,
+            cutout: '60%', //cutout from center
+            circumference: 180,
+            rotation: -90,
+        }
+    ],
         
     },
     options: {

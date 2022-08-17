@@ -10,6 +10,7 @@
     export let menu2sub1 = "Menu2sub1"
     export let menu2sub2 = "Menu2sub2"
     export let menu3 = "Menu3"
+    export let menu3URL= "/"
     export let btnMenu = "btnMenu"
 </script>
 
@@ -31,7 +32,7 @@
               <li><a href="/">{menu2sub2}</a></li>
             </ul>
           </li>
-          <li><a href="/">{menu3}</a></li>
+          <li><a href={menu3URL}>{menu3}</a></li>
         </ul>
       </div>
       <a href="/" class="btn btn-ghost normal-case text-xl">{appName}</a>
@@ -49,7 +50,7 @@
             <li><a href="/">{menu2sub2}</a></li>
           </ul>
         </li>
-        <li><a href="/">{menu3}</a></li>
+        <li><a href={menu3URL}>{menu3}</a></li>
       </ul>
     </div>
     <div class="navbar-end">
