@@ -94,7 +94,7 @@ export const DoughnutData ={
         datasets: [{
             data: [14,56,34],
             backgroundColor: ["rgba(237, 210, 0, 0.8)","rgba(237, 111, 0, 0.8)","rgba(255, 0, 0, 0.8)"],
-            borderWidth: 4,
+            borderWidth: 2,
             cutout: '60%', //cutout from center
             circumference: 180,
             rotation: -90,
